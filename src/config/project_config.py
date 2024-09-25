@@ -9,5 +9,4 @@ class ProjectSettings(BaseSettings):
     VERSION: str 
 
 
-
 project_settings = ProjectSettings()
