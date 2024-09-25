@@ -1,0 +1,25 @@
+services:
+
+  mysql:
+    image: mysql:8.0
+    container_name: best-mysql
+    environment:
+      MYSQL_ROOT_PASSWORD: ${MYSQL_ROOT_PASSWORD}
+      MYSQL_DATABASE: ${MYSQL_DATABASE}
+    env_file:
+      - .env
+    networks:
+      - best-network
+    ports:
+      - "3306:3306"
+
+  best_adminer:
+    image: adminer:latest 
+    ports:
+      - "8080:8080"
+    networks:
+      - best-network
+
+
+networks:
+  best-network:

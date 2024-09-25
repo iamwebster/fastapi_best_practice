@@ -5,9 +5,8 @@ load_dotenv()
 
 
 class ProjectSettings(BaseSettings):
-    PROJECT_NAME: str 
+    PROJECT_NAME: str = "FastAPI Best Practice"
     VERSION: str 
-    DEBUG: bool
 
 
 
